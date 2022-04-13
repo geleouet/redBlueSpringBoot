@@ -1,0 +1,14 @@
+classDiagram
+    Entity <|-- Repository
+    Repository <|-- Service
+    Service <|-- Controller  
+    Entity <|-- Service
+    Reponse <|-- Controller
+
+    class Entity{
+      +varchar team
+      +int score
+    }
+    class Application
+    
+            
