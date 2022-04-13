@@ -26,11 +26,11 @@ class RedblueApplicationTests {
 		HttpRequest red = HttpRequest.newBuilder()
 				.uri(URI.create(uri + "/red"))
 				.build();
-		client.send(red, BodyHandlers.ofString());
+		//client.send(red, BodyHandlers.ofString());
 
 		// WHEN
 		ExecutorService pool = Executors.newFixedThreadPool(8);
-		for (int i = 1; i < 1000; i++) {
+		for (int i = 0; i < 1000; i++) {
 			pool.execute(() -> {
 				try {
 					client.send(red, BodyHandlers.ofString());
